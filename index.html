@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+</head>
+<body>
+    <h1>Cafe Menu</h1>
+
+    <h2>1. Cold Coffee</h2>
+    <img src = "coldCoffee.jpg" width="250px">
+    <h3>Price : 70</h3>
+
+    <h2>2. Cheese Maggi</h2>
+    <img src = "cheeseMaggi.jpeg" width="250px">
+    <h3>Price : 50</h3>
+
+    <h2>3. Veg Sandwich</h2>
+    <img src = "vegSandwich.jpg" width="250px">
+    <h3>Price : 40</h3>
+
+    <h2>4. Egg Roll</h2>
+    <img src = "eggRoll.jpg" width="250px">
+    <h3>Price : 35</h3>
+
+    <h2>5. Tea</h2>
+    <img src = "tea.jpg" width="250px">
+    <h3>Price : 10</h3>
+
+    <h2>6. Hot Coffee</h2>
+    <img src = "hotCoffee.jpg" width="250px">
+    <h3>Price : 20</h3>
+
+    <h2>7. Donut</h2>
+    <img src = "donut.jpg" width="250px">
+    <h3>Price : 75</h3>
+
+    <h2>8. Cheese Burger</h2>
+    <img src = "cheeseBurger.jpg" width="250px">
+    <h3>Price : 30</h3>
+
+    <h2>9. French Fries</h2>
+    <img src = "frenchFries.jpg" width="250px">
+    <h3>Price : 100</h3>
+
+    <h2>10. Masala Dosa</h2>
+    <img src = "masalaDosa.jpg" width="250px">
+    <h3>Price : 55</h3>
+
+    <h2>For more items , <a href="https://www.zomato.com/bangalore/malabar-cafe-btm-bangalore" target="_blank"> Click Here </a> </h2>
+    <script>
+    
+        let items = [70 , 50, 40 , 35 , 10 , 20 , 75, 30, 100 , 55];
+
+        function billgenerate()
+        {
+            item = document.getElementById("item").value;
+            rate = items[item - 1];
+            quant = document.getElementById("quantity").value;
+            document.getElementById("totalvalue").innerHTML = rate * quant;
+        }
+    
+    </script>
+
+    <form>
+            <label>Enter the Item No. : </label>
+            <input type="text" id="item">
+            <br>
+            <label>Quantity : </label>
+            <input type="text" id="quantity">
+            <br>
+            <input type="button" onclick="billgenerate()" value="Total Bill">
+    </form>
+
+    <p>
+        Total Bill To Pay = 
+        <span id="totalvalue"></span>
+    </p>
+</body>
+</html>
